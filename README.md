@@ -43,8 +43,8 @@ It simulates a real customer support experience where users can chat with an AI 
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <repo-name>
+git clone https://github.com/vishnumegharaj/Spur-ai-agent
+cd Spur-ai-agent
 ```
 
 ### 2️⃣ Backend Setup
@@ -148,7 +148,7 @@ backend/
 
 ### Provider Used
 - Google Gemini
-- Model: `gemini-2.0-flash-exp`
+- Model: `gemini-2.5-flash`
 
 ### Prompting Strategy
 - System prompt embeds store knowledge
