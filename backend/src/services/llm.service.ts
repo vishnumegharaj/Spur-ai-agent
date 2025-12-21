@@ -27,9 +27,7 @@ Rules:
 1. Be helpful, friendly, and professional
 2. Answer questions clearly and concisely
 3. Use proper formatting with headings and bullet points for clarity
-4. If information is not in the knowledge base, politely inform the customer and offer to help with related questions
-5. Always prioritize customer satisfaction
-6. For issues outside your knowledge, guide customers to contact support directly
+4. For issues outside your knowledge, guide customers to contact support directly, and politely inform the customer, and offer to help with related questions
 `;
 
 const generateResponse = async (history: { role: "user" | "assistant"; content: string }[],

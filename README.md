@@ -178,6 +178,8 @@ backend/
 - Streaming responses
 - Admin dashboard
 - Multi-channel support
+- Redis cache
+
 
 ---
 
