@@ -14,6 +14,7 @@ const FALLBACK_ERROR_MESSAGE =
   "⚠️ Sorry, I'm having trouble responding right now. Please try again.";
 
 const MAX_MESSAGE_LENGTH = 1000;
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:4000";
 
 function App() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -54,7 +55,7 @@ function App() {
 
   const fetchHistory = async (id: number) => {
     try {
-      const res = await fetch(`http://localhost:4000/chat/history/${id}`);
+      const res = await fetch(`${API_URL}/chat/history/${id}`);
       
       if (!res.ok) {
         throw new Error(`HTTP ${res.status}`);
@@ -122,7 +123,7 @@ function App() {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000);
 
-      const res = await fetch("http://localhost:4000/chat/message", {
+      const res = await fetch(`${API_URL}/chat/message`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userText, sessionId }),
